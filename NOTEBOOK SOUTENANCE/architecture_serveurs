@@ -1,0 +1,20 @@
+digraph Serveurs {
+	bgcolor=white fontname=Helvetica fontsize=12 rankdir=LR
+	T [label="Serveur de transactions" color=lightblue fontname=Helvetica fontsize=12 shape=box3d style=filled]
+	A [label="Serveur d’abonnés" color=lightblue fontname=Helvetica fontsize=12 shape=box3d style=filled]
+	R [label="Serveur de rechargement" color=lightblue fontname=Helvetica fontsize=12 shape=box3d style=filled]
+	PC1 [label="Ordinateur 1" color=lightgrey fontname=Helvetica fontsize=11 shape=ellipse style=filled]
+	PC2 [label="Ordinateur 2" color=lightgrey fontname=Helvetica fontsize=11 shape=ellipse style=filled]
+	S [label="Autres services" color=lightcoral fontname=Helvetica fontsize=12 shape=folder style=filled]
+	T -> A
+	A -> R
+	R -> T
+	T -> PC1 [color=grey]
+	A -> PC1 [color=grey]
+	R -> PC1 [color=grey]
+	T -> PC2 [color=grey]
+	A -> PC2 [color=grey]
+	R -> PC2 [color=grey]
+	PC1 -> S [color=black style=bold]
+	PC2 -> S [color=black style=bold]
+}
